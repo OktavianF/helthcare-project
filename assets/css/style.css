@@ -1,0 +1,726 @@
+/* Base Styles */
+:root {
+  --primary-color: #0073cc;
+  --primary-light: #e6f2ff;
+  --primary-dark: #005a9e;
+  --secondary-color: #00a3a3;
+  --secondary-light: #e6f7f7;
+  --accent-color: #f5a623;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --error-color: #dc3545;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+  --white: #ffffff;
+  --font-family-heading: 'Source Sans Pro', sans-serif;
+  --font-family-body: 'Open Sans', sans-serif;
+  --spacing-1: 8px;
+  --spacing-2: 16px;
+  --spacing-3: 24px;
+  --spacing-4: 32px;
+  --spacing-5: 48px;
+  --spacing-6: 64px;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-body);
+  line-height: 1.5;
+  color: var(--gray-800);
+  background-color: var(--gray-100);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-2);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-2);
+}
+
+/* Header */
+.site-header {
+  background-color: var(--white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.logo-icon {
+  font-size: 24px;
+  margin-right: var(--spacing-1);
+  background-color: var(--primary-color);
+  color: var(--white);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.main-nav ul {
+  display: flex;
+}
+
+.main-nav li {
+  margin-left: var(--spacing-3);
+}
+
+.main-nav a {
+  color: var(--gray-700);
+  font-weight: 600;
+  padding: var(--spacing-1);
+  display: block;
+}
+
+.main-nav a:hover {
+  color: var(--primary-color);
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: var(--transition);
+  background-color: var(--gray-700);
+}
+
+/* Hero Section */
+.hero {
+  background-color: var(--primary-light);
+  padding: var(--spacing-6) 0;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-3);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--gray-700);
+  margin-bottom: var(--spacing-4);
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-2);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  font-family: var(--font-family-body);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  color: var(--white);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-light);
+  color: var(--secondary-color);
+}
+
+/* Polyclinic Section */
+.polyclinic-section {
+  padding: var(--spacing-5) 0;
+  text-align: center;
+}
+
+.polyclinic-section h2 {
+  font-size: 2rem;
+  color: var(--gray-800);
+  margin-bottom: var(--spacing-2);
+}
+
+.polyclinic-section p {
+  color: var(--gray-600);
+  margin-bottom: var(--spacing-4);
+}
+
+.polyclinic-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-3);
+  margin-top: var(--spacing-4);
+}
+
+.polyclinic-card {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-3);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.polyclinic-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.polyclinic-card h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-2);
+}
+
+.polyclinic-card p {
+  color: var(--gray-700);
+  margin-bottom: var(--spacing-3);
+  flex: 1;
+}
+
+.quota-badge {
+  display: inline-block;
+  padding: var(--spacing-1) var(--spacing-2);
+  background-color: var(--success-color);
+  color: var(--white);
+  border-radius: 20px;
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-3);
+}
+
+.quota-badge.limited {
+  background-color: var(--warning-color);
+}
+
+.quota-badge.full {
+  background-color: var(--error-color);
+}
+
+/* Feature Cards */
+.features {
+  padding: var(--spacing-5) 0;
+  background-color: var(--white);
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-4);
+}
+
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing-3);
+}
+
+.feature-card {
+  padding: var(--spacing-3);
+  background-color: var(--gray-100);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-2);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.feature-card h3 {
+  color: var(--gray-800);
+  margin-bottom: var(--spacing-1);
+}
+
+.feature-card p {
+  color: var(--gray-600);
+}
+
+/* Registration Form */
+.registration-section {
+  padding: var(--spacing-4) 0;
+}
+
+.back-link {
+  margin-bottom: var(--spacing-3);
+}
+
+.registration-section h1 {
+  margin-bottom: var(--spacing-3);
+  color: var(--primary-color);
+}
+
+.polyclinic-info {
+  background-color: var(--primary-light);
+  padding: var(--spacing-3);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-3);
+}
+
+.quota-info {
+  display: flex;
+  gap: var(--spacing-4);
+}
+
+.quota-info p {
+  font-weight: 600;
+}
+
+.quota-info span {
+  font-weight: 400;
+  color: var(--gray-700);
+}
+
+.registration-form {
+  background-color: var(--white);
+  padding: var(--spacing-4);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: var(--spacing-4);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-3);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--spacing-1);
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: var(--spacing-2);
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius);
+  font-family: var(--font-family-body);
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.form-help {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  margin-top: var(--spacing-1);
+}
+
+.form-actions {
+  display: flex;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-3);
+}
+
+.registration-result {
+  background-color: var(--primary-light);
+  padding: var(--spacing-3);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.registration-result h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-2);
+}
+
+.registration-code {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  background-color: var(--white);
+  padding: var(--spacing-2);
+  border-radius: var(--border-radius);
+  margin: var(--spacing-2) 0;
+  display: inline-block;
+  letter-spacing: 2px;
+  border: 2px dashed var(--primary-color);
+}
+
+/* Queue Status */
+.queue-status-section {
+  padding: var(--spacing-4) 0;
+}
+
+.queue-status-section h1 {
+  margin-bottom: var(--spacing-3);
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.status-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-3);
+  border-bottom: 2px solid var(--gray-200);
+}
+
+.tab-btn {
+  padding: var(--spacing-2) var(--spacing-3);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--gray-600);
+  position: relative;
+}
+
+.tab-btn.active {
+  color: var(--primary-color);
+}
+
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.card {
+  background-color: var(--white);
+  padding: var(--spacing-4);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: var(--spacing-4);
+}
+
+.lookup-form {
+  max-width: 400px;
+  margin: var(--spacing-3) auto;
+}
+
+.patient-status {
+  margin-top: var(--spacing-3);
+  padding: var(--spacing-3);
+  background-color: var(--primary-light);
+  border-radius: var(--border-radius);
+}
+
+.current-queues {
+  margin-top: var(--spacing-3);
+}
+
+.queue-card {
+  background-color: var(--primary-light);
+  padding: var(--spacing-3);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.queue-card h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-1);
+}
+
+.queue-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  background-color: var(--white);
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--border-radius);
+}
+
+/* Alert */
+.alert {
+  padding: var(--spacing-3);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-3);
+}
+
+.alert-error {
+  background-color: #fde8e8;
+  color: var(--error-color);
+  border: 1px solid #fbd5d5;
+}
+
+.alert-success {
+  background-color: #def7ec;
+  color: var(--success-color);
+  border: 1px solid #bcf0da;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--gray-800);
+  color: var(--gray-300);
+  padding: var(--spacing-4) 0;
+  margin-top: var(--spacing-5);
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-3);
+}
+
+.footer-info {
+  margin-bottom: var(--spacing-3);
+}
+
+.footer-info p {
+  margin-bottom: var(--spacing-1);
+}
+
+.footer-links h4 {
+  color: var(--white);
+  margin-bottom: var(--spacing-2);
+}
+
+.footer-links ul li {
+  margin-bottom: var(--spacing-1);
+}
+
+.footer-links a {
+  color: var(--gray-400);
+}
+
+.footer-links a:hover {
+  color: var(--white);
+}
+
+/* Utility Classes */
+.loading {
+  text-align: center;
+  color: var(--gray-600);
+  padding: var(--spacing-3);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+  
+  .main-nav {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: var(--white);
+    transition: var(--transition);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-nav.active {
+    left: 0;
+  }
+  
+  .main-nav ul {
+    flex-direction: column;
+    padding: var(--spacing-2);
+  }
+  
+  .main-nav li {
+    margin: 0;
+    margin-bottom: var(--spacing-2);
+  }
+  
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .mobile-menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .mobile-menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .mobile-menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  .footer-content {
+    flex-direction: column;
+  }
+  
+  .footer-links, .footer-info {
+    margin-bottom: var(--spacing-3);
+  }
+  
+  .quota-info {
+    flex-direction: column;
+    gap: var(--spacing-1);
+  }
+}
+
+@media (max-width: 480px) {
+  .polyclinic-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .feature-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+}

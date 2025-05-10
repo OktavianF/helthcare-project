@@ -1,0 +1,445 @@
+/* Admin-specific styles */
+:root {
+  --admin-primary: #3a4e9b;
+  --admin-primary-light: #e8eaf6;
+  --admin-primary-dark: #2c3e80;
+  --admin-secondary: #6a8eff;
+  --admin-accent: #ff5722;
+  --admin-success: #4caf50;
+  --admin-warning: #ff9800;
+  --admin-danger: #f44336;
+}
+
+body.admin-body {
+  background-color: #f5f7fa;
+}
+
+/* Admin Header */
+.admin-header {
+  background-color: var(--admin-primary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-header .logo a {
+  color: var(--white);
+}
+
+.admin-header .main-nav a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.admin-header .main-nav a:hover {
+  color: var(--white);
+}
+
+.admin-header .bar {
+  background-color: var(--white);
+}
+
+/* Admin Dashboard */
+.admin-dashboard {
+  padding: var(--spacing-4) 0;
+}
+
+.admin-welcome {
+  background-color: var(--white);
+  padding: var(--spacing-3);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: var(--spacing-4);
+}
+
+.admin-welcome h2 {
+  color: var(--admin-primary);
+  margin-bottom: var(--spacing-2);
+}
+
+.admin-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+}
+
+.admin-card {
+  background-color: var(--white);
+  padding: var(--spacing-3);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-2);
+}
+
+.admin-card-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--admin-primary-light);
+  color: var(--admin-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: var(--spacing-2);
+  font-size: 1.25rem;
+}
+
+.admin-card h3 {
+  color: var(--gray-800);
+  margin-bottom: 0;
+}
+
+.admin-card-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--admin-primary);
+  margin: var(--spacing-2) 0;
+}
+
+/* Admin Tables */
+.admin-table-wrapper {
+  background-color: var(--white);
+  padding: var(--spacing-3);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: var(--spacing-2);
+  text-align: left;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.admin-table th {
+  font-weight: 600;
+  color: var(--gray-700);
+  background-color: var(--gray-100);
+}
+
+.admin-table tbody tr:hover {
+  background-color: var(--gray-100);
+}
+
+.admin-table .actions {
+  display: flex;
+  gap: var(--spacing-1);
+}
+
+/* Admin Forms */
+.admin-form {
+  background-color: var(--white);
+  padding: var(--spacing-4);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.admin-form-title {
+  margin-bottom: var(--spacing-3);
+  color: var(--admin-primary);
+  text-align: center;
+}
+
+/* Admin Buttons */
+.admin-btn {
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  font-family: var(--font-family-body);
+  font-size: 0.875rem;
+}
+
+.admin-btn-primary {
+  background-color: var(--admin-primary);
+  color: var(--white);
+}
+
+.admin-btn-primary:hover {
+  background-color: var(--admin-primary-dark);
+}
+
+.admin-btn-success {
+  background-color: var(--admin-success);
+  color: var(--white);
+}
+
+.admin-btn-success:hover {
+  background-color: #3d8b40;
+}
+
+.admin-btn-warning {
+  background-color: var(--admin-warning);
+  color: var(--white);
+}
+
+.admin-btn-warning:hover {
+  background-color: #e68900;
+}
+
+.admin-btn-danger {
+  background-color: var(--admin-danger);
+  color: var(--white);
+}
+
+.admin-btn-danger:hover {
+  background-color: #d32f2f;
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-pending {
+  background-color: var(--gray-200);
+  color: var(--gray-700);
+}
+
+.status-verified {
+  background-color: var(--admin-secondary);
+  color: var(--white);
+}
+
+.status-serving {
+  background-color: var(--admin-warning);
+  color: var(--white);
+}
+
+.status-completed {
+  background-color: var(--admin-success);
+  color: var(--white);
+}
+
+.status-cancelled {
+  background-color: var(--admin-danger);
+  color: var(--white);
+}
+
+/* Patient verification */
+.verification-section {
+  padding: var(--spacing-4) 0;
+}
+
+.verification-filter {
+  background-color: var(--white);
+  padding: var(--spacing-3);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: var(--spacing-4);
+  display: flex;
+  gap: var(--spacing-2);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.verification-filter label {
+  font-weight: 600;
+  margin-right: var(--spacing-1);
+}
+
+.verification-filter select {
+  padding: var(--spacing-1) var(--spacing-2);
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius);
+  font-family: var(--font-family-body);
+}
+
+.patient-card {
+  background-color: var(--white);
+  padding: var(--spacing-3);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: var(--spacing-3);
+}
+
+.patient-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-2);
+  padding-bottom: var(--spacing-2);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.patient-header h3 {
+  margin-bottom: 0;
+  color: var(--admin-primary);
+}
+
+.patient-info {
+  margin-bottom: var(--spacing-3);
+}
+
+.patient-info p {
+  margin-bottom: var(--spacing-1);
+}
+
+.patient-info strong {
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.verification-actions {
+  display: flex;
+  gap: var(--spacing-2);
+  justify-content: flex-end;
+}
+
+/* Login Form */
+.login-container {
+  max-width: 400px;
+  margin: var(--spacing-6) auto;
+}
+
+.login-form {
+  background-color: var(--white);
+  padding: var(--spacing-4);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.login-title {
+  text-align: center;
+  color: var(--admin-primary);
+  margin-bottom: var(--spacing-3);
+}
+
+.login-logo {
+  text-align: center;
+  margin-bottom: var(--spacing-3);
+}
+
+.login-logo .logo-icon {
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+}
+
+/* Polyclinic management */
+.polyclinic-management {
+  padding: var(--spacing-4) 0;
+}
+
+.management-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-3);
+}
+
+.add-polyclinic-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+
+.polyclinic-form {
+  display: none;
+  margin-bottom: var(--spacing-4);
+}
+
+.polyclinic-form.active {
+  display: block;
+}
+
+.time-inputs {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.time-inputs .form-group {
+  flex: 1;
+}
+
+/* Dashboard tabs */
+.dashboard-tabs {
+  display: flex;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-3);
+  flex-wrap: wrap;
+}
+
+.dashboard-tab {
+  padding: var(--spacing-2) var(--spacing-3);
+  background-color: var(--gray-200);
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  color: var(--gray-700);
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+}
+
+.dashboard-tab.active,
+.dashboard-tab:hover {
+  background-color: var(--admin-primary);
+  color: var(--white);
+}
+
+.dashboard-content {
+  display: none;
+}
+
+.dashboard-content.active {
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-cards {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .verification-filter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .verification-filter label {
+    margin-bottom: var(--spacing-1);
+  }
+  
+  .verification-filter select {
+    width: 100%;
+  }
+  
+  .patient-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .patient-header h3 {
+    margin-bottom: var(--spacing-1);
+  }
+  
+  .verification-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .verification-actions button {
+    width: 100%;
+  }
+}
