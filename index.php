@@ -6,7 +6,7 @@
 <main class="container">
   <section class="hero">
     <div class="hero-content">
-      <h1>Healthcare Clinic Queue Management</h1>
+      <h1>Selamat Datang di UPTD Puskesmas Sananwetant</h1>
       <p>Register online and avoid waiting in long lines</p>
       <div class="hero-buttons">
         <a href="#polyclinic-section" class="btn btn-primary">Register Now</a>
